@@ -1,5 +1,36 @@
 # Changelog
 
+## 2.0.55
+
+- Fixed proxy DNS resolution being forced on by default. Now opt-in via `CLAUDE_CODE_PROXY_RESOLVES_HOSTS=true` environment variable
+- Fixed keyboard navigation becoming unresponsive when holding down arrow keys in memory location selector
+- Improved AskUserQuestion tool to auto-submit single-select questions on the last question, eliminating the extra review screen for simple question flows
+- Improved fuzzy matching for `@` file suggestions with faster, more accurate results
+
+## 2.0.54
+
+- Hooks: Enable PermissionRequest hooks to process 'always allow' suggestions and apply permission updates
+- Fix issue with excessive iTerm notifications
+
+## 2.0.52
+
+- Fixed duplicate message display when starting Claude with a command line argument
+- Fixed `/usage` command progress bars to fill up as usage increases (instead of showing remaining percentage)
+- Fixed image pasting not working on Linux systems running Wayland (now falls back to wl-paste when xclip is unavailable)
+- Permit some uses of `$!` in bash commands
+
+## 2.0.51
+
+- Added Opus 4.5! https://www.anthropic.com/news/claude-opus-4-5
+- Introducing Claude Code for Desktop: https://claude.com/download
+- To give you room to try out our new model, we've updated usage limits for Claude Code users. See the Claude Opus 4.5 blog for full details
+- Pro users can now purchase extra usage for access to Opus 4.5 in Claude Code
+- Plan Mode now builds more precise plans and executes more thoroughly
+- Usage limit notifications now easier to understand
+- Switched `/usage` back to "% used"
+- Fixed handling of thinking errors
+- Fixed performance regression
+
 ## 2.0.50
 
 - Fixed bug preventing calling MCP tools that have nested references in their input schemas
